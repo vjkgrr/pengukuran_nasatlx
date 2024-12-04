@@ -39,7 +39,7 @@ function saveScoresAndNavigate() {
 // Fungsi untuk menyimpan hasil perbandingan
 function saveComparison(key, dimension) {
     const weights = {
-        mental: 50, physical: 30, time: 40, performance: 20, effort: 30, frustration: 40,
+        mental: 25, physical: 12, time: 18, performance: 9, effort: 8, frustration: 22,
     };
 
     localStorage.setItem(key, dimension);
