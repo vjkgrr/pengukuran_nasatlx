@@ -8,8 +8,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
     <link href="css/tailwind-custom.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
-    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#1B9AF5" data-border-radius="medium"></script>
     <link href="../dist/output.css" rel="stylesheet">
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet"/>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#1B9AF5" data-border-radius="medium"></script>
 
 </head>
 <body class="bg-gray-900 font-[&#39;Inter&#39;]">
@@ -84,17 +85,19 @@
                             <!-- Skor Total -->
                             <div class="mb-8">
                                 <div class="bg-gradient-to-br from-gray-700 to-gray-800 rounded-2xl p-12 mt-12 flex flex-col items-center transform hover:scale-105 transition-transform duration-300 shadow-2xl border border-gray-600/30 backdrop-blur-xl">
+                                    <div class="mb-8"><div class="bg-gradient-to-br from-gray-700 to-gray-800 rounded-2xl p-12 mt-12 flex flex-col items-center transform hover:scale-105 transition-transform duration-300 shadow-2xl border border-gray-600/30 backdrop-blur-xl">
                                     <div class="w-40 h-40 rounded-full bg-gradient-to-br from-custom/30 to-blue-500/30 flex items-center justify-center mb-6 animate-pulse shadow-2xl border border-custom/20">
-                                        <i class="fas fa-chart-line text-4xl text-custom"></i>
+                                        <i class="fas fa-chart-line text-6xl text-custom"></i>
                                     </div>
                                     <h3 class="text-lg font-medium text-gray-100 mb-4">Skor Total NASA TLX</h3>
                                     <div id="totalScore" class="text-5xl font-extrabold text-white mb-4 flex items-center gap-2 tracking-tight">0 <span class="text-2xl text-gray-400">/100</span></div>
-                                    <p id="totalCategory" class="text-gray-400 text-center"></p>
-                                      
-                                <button onclick="window.location.href='index.html'" class="!rounded-full w-full bg-gradient-to-r from-custom via-blue-500 to-purple-600 text-white py-5 px-8 font-semibold tracking-wide hover:from-purple-600 hover:via-blue-500 hover:to-custom transition-all duration-500 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom shadow-xl">Kembali ke Awal</button>
-                            </div>
+                                    <div id="totalCategory" = "text-gray-400 text-center"
+                                        class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100/10 text-yellow-400"
+                                       <i>class="fas fa-circle text-xs mr-2"></i></div>
+                                 </div>
                         </div>
-    
+                        <button onclick="window.location.href='index.html'" class="!rounded-full w-full bg-gradient-to-r from-custom via-blue-500 to-purple-600 text-white py-5 px-8 font-semibold tracking-wide hover:from-purple-600 hover:via-blue-500 hover:to-custom transition-all duration-500 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom shadow-xl">Kembali ke Awal</button>
+                            
                     </div>
                 </div>
             </div>
@@ -109,71 +112,6 @@
             </div>
         </footer>
     </div>
-    <script>
-                function displayScores() {
-            // Ambil data dari localStorage
-            const mental = parseInt(localStorage.getItem('mental')) || 0;
-            const physical = parseInt(localStorage.getItem('physical')) || 0;
-            const time = parseInt(localStorage.getItem('time')) || 0;
-            const performance = parseInt(localStorage.getItem('performance')) || 0;
-            const effort = parseInt(localStorage.getItem('effort')) || 0;
-            const frustration = parseInt(localStorage.getItem('frustration')) || 0;
-
-            // Tampilkan skor per dimensi
-            if (document.getElementById('mentalScore')) {
-                document.getElementById('mentalScore').textContent = mental;
-                document.getElementById('mentalBar').style.width = `${mental}%`;
-            }
-
-            if (document.getElementById('physicalScore')) {
-                document.getElementById('physicalScore').textContent = physical;
-                document.getElementById('physicalBar').style.width = `${physical}%`;
-            }
-
-            if (document.getElementById('timeScore')) {
-                document.getElementById('timeScore').textContent = time;
-                document.getElementById('timeBar').style.width = `${time}%`;
-            }
-
-            if (document.getElementById('performanceScore')) {
-                document.getElementById('performanceScore').textContent = performance;
-                document.getElementById('performanceBar').style.width = `${performance}%`;
-            }
-
-            if (document.getElementById('effortScore')) {
-                document.getElementById('effortScore').textContent = effort;
-                document.getElementById('effortBar').style.width = `${effort}%`;
-            }
-
-            if (document.getElementById('frustrationScore')) {
-                document.getElementById('frustrationScore').textContent = frustration;
-                document.getElementById('frustrationBar').style.width = `${frustration}%`;
-            }
-
-            // Hitung total skor
-            const totalScore = ((mental + physical + time + performance + effort + frustration) / 6).toFixed(2);
-            if (document.getElementById('displayScores')) {
-                document.getElementById('displayScores').textContent = `${totalScore}`;
-            }
-
-            // Kategori skor total
-            let category = '';
-            if (totalScore <= 33) {
-                category = '<span class="text-green-400">Beban Kerja Ringan</span>';
-            } else if (totalScore <= 66) {
-                category = '<span class="text-yellow-400">Beban Kerja Menengah</span>';
-            } else {
-                category = '<span class="text-red-400">Beban Kerja Berat</span>';
-            }
-
-            if (document.getElementById('totalCategory')) {
-                document.getElementById('totalCategory').innerHTML = category;
-            }
-        }
-
-        // Pastikan fungsi dipanggil setelah elemen HTML siap
-            document.addEventListener('DOMContentLoaded', displayScores);
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>

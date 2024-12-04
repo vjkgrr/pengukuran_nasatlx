@@ -5,7 +5,6 @@
     <title>NASA TLX Assessment</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
     <link href="css/tailwind-custom.css" rel="stylesheet">
-    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
     <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#1B9AF5" data-border-radius="medium"></script>
     <link href="../dist/output.css" rel="stylesheet">
@@ -33,12 +32,12 @@
                         </div>
 
                         <div class="mb-8"><div class="space-y-8">
-                            <div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Beban Mental</h3><p class="text-gray-400 mb-4">Seberapa banyak aktivitas mental dan persepsi yang diperlukan?</p><input type="range" min="0" max="100" oninput="updateLabel('mental', this.value)" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span id="mentalValue">0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div>
-                            <div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Beban Fisik</h3><p class="text-gray-400 mb-4">Seberapa banyak aktivitas fisik yang diperlukan?</p><input type="range" min="0" max="100" oninput="updateLabel('physical', this.value)" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span id="physicalValue">0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div>
-                            <div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Tekanan Waktu</h3><p class="text-gray-400 mb-4">Seberapa besar tekanan waktu yang Anda rasakan?</p><input type="range" min="0" max="100" oninput="updateLabel('time', this.value)" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span id="timeValue">0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div>
-                            <div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Kinerja</h3><p class="text-gray-400 mb-4">Seberapa berhasil Anda dalam menyelesaikan apa yang diminta?</p><input type="range" min="0" max="100" oninput="updateLabel('performance', this.value)" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span id="performanceValue">0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sempurna</span><span>Gagal</span></div></div>
-                            <div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Usaha</h3><p class="text-gray-400 mb-4">Seberapa keras Anda harus bekerja untuk mencapai tingkat kinerja Anda?</p><input type="range" min="0" max="100" oninput="updateLabel('effort', this.value)" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span id="effortValue">0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div>
-                            <div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Frustrasi</h3><p class="text-gray-400 mb-4">Seberapa tidak aman, kecewa, kesal, stres, dan terganggu yang Anda rasakan?</p><input type="range" min="0" max="100" oninput="updateLabel('frustration', this.value)" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span id="frustrationValue">0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div></div></div>
+                            <div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Beban Mental</h3><p class="text-gray-400 mb-4">Seberapa banyak aktivitas mental dan persepsi yang diperlukan?</p><input type="range" min="0" max="100" oninput="updateLabel('mental', this.value)" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span id="mentalBar">0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div>
+                            <div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Beban Fisik</h3><p class="text-gray-400 mb-4">Seberapa banyak aktivitas fisik yang diperlukan?</p><input type="range" min="0" max="100" oninput="updateLabel('physical', this.value)" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span id="physicalBar">0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div>
+                            <div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Tekanan Waktu</h3><p class="text-gray-400 mb-4">Seberapa besar tekanan waktu yang Anda rasakan?</p><input type="range" min="0" max="100" oninput="updateLabel('time', this.value)" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span id="timeBar">0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div>
+                            <div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Kinerja</h3><p class="text-gray-400 mb-4">Seberapa berhasil Anda dalam menyelesaikan apa yang diminta?</p><input type="range" min="0" max="100" oninput="updateLabel('performance', this.value)" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span id="performanceBar">0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sempurna</span><span>Gagal</span></div></div>
+                            <div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Usaha</h3><p class="text-gray-400 mb-4">Seberapa keras Anda harus bekerja untuk mencapai tingkat kinerja Anda?</p><input type="range" min="0" max="100" oninput="updateLabel('effort', this.value)" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span id="effortBar">0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div>
+                            <div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Frustrasi</h3><p class="text-gray-400 mb-4">Seberapa tidak aman, kecewa, kesal, stres, dan terganggu yang Anda rasakan?</p><input type="range" min="0" max="100" oninput="updateLabel('frustration', this.value)" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span id="frustrationBar">0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div></div></div>
 
                         
 
@@ -72,56 +71,6 @@
                 </div>
             </div>
         </footer>
-        <script>
-            /**
-             * Fungsi untuk memperbarui nilai slider
-             */
-            function updateLabel(id, value) {
-                document.getElementById(id + 'Value').textContent = value;
-            }
-        
-            /**
-             * Fungsi untuk menyimpan skor ke localStorage dan navigasi
-             */
-             function saveScoresAndNavigate() {
-                console.log('Navigating to vs.html'); // Debugging log
-
-                // Ambil nilai slider
-                const mental = document.getElementById('mental')?.value || null;
-                const physical = document.getElementById('physical')?.value || null;
-                const time = document.getElementById('time')?.value || null;
-                const performance = document.getElementById('performance')?.value || null;
-                const effort = document.getElementById('effort')?.value || null;
-                const frustration = document.getElementById('frustration')?.value || null;
-
-                console.log({ mental, physical, time, performance, effort, frustration });
-
-                // Cek apakah semua nilai diambil dengan benar
-                if (!mental || !physical || !time || !performance || !effort || !frustration) {
-                    alert('Semua nilai harus diisi sebelum melanjutkan.');
-                    return;
-                }
-
-                // Simpan ke localStorage
-                localStorage.setItem('mental', mental);
-                localStorage.setItem('physical', physical);
-                localStorage.setItem('time', time);
-                localStorage.setItem('performance', performance);
-                localStorage.setItem('effort', effort);
-                localStorage.setItem('frustration', frustration);
-
-                console.log('Data saved to localStorage.');
-
-                // Arahkan ke halaman berikutnya
-                window.location.href = 'vs.html';
-            }
-
-        
-            // Pastikan script berjalan setelah DOM siap
-            document.addEventListener('DOMContentLoaded', () => {
-                console.log('Page loaded');
-            });
-        </script>
-        
+        <script src="script.js"></script>
 </body>
 </html>

@@ -5,7 +5,6 @@
     <title>NASA TLX Assessment</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
     <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#1B9AF5" data-border-radius="medium"></script>
     <link href="../dist/output.css" rel="stylesheet">
@@ -28,11 +27,20 @@
                 <div class="bg-gray-800 shadow-lg rounded-xl overflow-hidden border border-gray-700">
                     <div class="p-8">
                         <div class="mb-8 order-2">
-                            <h1 class="text-3xl font-bold text-gray-100 mb-4">Penilaian NASA TLX</h1>
+                            <h1 class="text-3xl font-bold text-gray-100 mb-4">Informasi Pribadi</h1>
                             <p class="text-gray-400">Silakan lengkapi penilaian NASA Task Load Index (NASA-TLX) untuk mengevaluasi beban kerja yang Anda rasakan dalam enam dimensi.</p>
                         </div>
 
-                        <div class="mb-8"><div class="grid grid-cols-2 gap-6"><div class="col-span-2 sm:col-span-1"><label class="block text-sm font-medium text-gray-100 mb-2">Nama Depan</label><input type="text" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-100 focus:outline-none focus:ring-2 focus:ring-custom"/></div><div class="col-span-2 sm:col-span-1"><label class="block text-sm font-medium text-gray-100 mb-2">Jenis Pekerjaan</label><input type="text" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-100 focus:outline-none focus:ring-2 focus:ring-custom"/></div><div class="col-span-2"><label class="block text-sm font-medium text-gray-100 mb-2">Alamat Email</label><input type="email" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-100 focus:outline-none focus:ring-2 focus:ring-custom"/></div><div class="col-span-2 sm:col-span-1"><label class="block text-sm font-medium text-gray-100 mb-2">Usia</label><input type="number" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-100 focus:outline-none focus:ring-2 focus:ring-custom"/></div><div class="col-span-2 sm:col-span-1"><label class="block text-sm font-medium text-gray-100 mb-2">Jenis Kelamin</label><select class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-100 focus:outline-none focus:ring-2 focus:ring-custom"><option value="">Pilih jenis kelamin</option><option value="male">Laki-laki</option><option value="female">Perempuan</option><option value="other">Lainnya</option><option value="prefer-not-to-say">Lebih baik tidak menyebutkan</option></select></div></div></div>
+                        <div class="mb-8"><div class="grid grid-cols-2 gap-6">
+                        <div class="col-span-2 sm:col-span-1"><label class="block text-sm font-medium text-gray-100 mb-2" id="nama">Nama Depan</label><input type="text" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-100 focus:outline-none focus:ring-2 focus:ring-custom"/></div>
+                        <div class="col-span-2 sm:col-span-1"><label class="block text-sm font-medium text-gray-100 mb-2" id="pekerjaan">Jenis Pekerjaan</label><input type="text" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-100 focus:outline-none focus:ring-2 focus:ring-custom"/></div>
+                        <div class="col-span-2"><label class="block text-sm font-medium text-gray-100 mb-2" id="email">Alamat Email</label><input type="email" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-100 focus:outline-none focus:ring-2 focus:ring-custom"/></div>
+                        <div class="col-span-2 sm:col-span-1"><label class="block text-sm font-medium text-gray-100 mb-2" id="usia">Usia</label><input type="number" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-100 focus:outline-none focus:ring-2 focus:ring-custom"/></div>
+                        <div class="col-span-2 sm:col-span-1"><label class="block text-sm font-medium text-gray-100 mb-2" id="gender">Jenis Kelamin</label><select class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-100 focus:outline-none focus:ring-2 focus:ring-custom">
+                            <option value="">Pilih jenis kelamin</option><option value="male">Laki-laki</option><option value="female">Perempuan</option><option value="other">Lainnya</option><option value="prefer-not-to-say">Lebih baik tidak menyebutkan</option></select>
+                        </div>
+                    </div>
+                </div>
 
                         <div class="mb-8 order-1 bg-gray-700/50 rounded-lg p-6">
                             <div class="flex flex-col space-y-4">
@@ -64,9 +72,13 @@
                                 </div>
                             </div>
                         </div>
-
-                        <button onclick="window.location.href='skala.html'" class="!rounded-full w-full bg-gradient-to-r from-custom via-blue-500 to-purple-600 text-white py-5 px-8 font-semibold tracking-wide hover:from-purple-600 hover:via-blue-500 hover:to-custom transition-all duration-500 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom shadow-xl">Lanjut ke Penilaian</button>
-
+                        
+                        <form onsubmit="saveBioAndProceed(); return false;">
+                            <button type="submit" class="!rounded-full w-full bg-gradient-to-r from-custom via-blue-500 to-purple-600 text-white py-5 px-8 font-semibold tracking-wide hover:from-purple-600 hover:via-blue-500 hover:to-custom transition-all duration-500 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom shadow-xl">
+                                Lanjut ke Pengukuran
+                            </button>
+                        </form>
+                        
                         <div class="mt-8">
                             <details class="group">
                                 <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
@@ -117,6 +129,6 @@
             </div>
         </footer>
     </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
