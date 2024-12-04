@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>NASA TLX Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="css/tailwind-custom.css" rel="stylesheet">
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#1B9AF5" data-border-radius="medium"></script>
+</head>
+<body class="bg-gray-900 font-sans">
+    <div class="min-h-screen flex flex-col">
+        <nav class="bg-gray-800 shadow-sm">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex items-center">
+                       <span class="ml-3 text-xl font-semibold text-gray-100">Penilaian NASA TLX</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-gray-800 shadow-sm rounded-lg overflow-hidden">
+                    <div class="p-8">
+                        <div class="mb-8 order-2">
+                            <h1 class="text-3xl font-bold text-gray-100 mb-4">Penilaian NASA TLX</h1>
+                            <p class="text-gray-400">Silakan nilai pengalaman Anda untuk setiap dimensi di bawah ini pada skala 0 hingga 100. Geser ke kanan untuk nilai lebih tinggi, ke kiri untuk nilai lebih rendah. Contoh: 25 menunjukkan intensitas rendah, 50 menunjukkan intensitas sedang, dan 75 menunjukkan intensitas tinggi.</p>
+                        </div>
+
+                        <div class="mb-8"><div class="space-y-8"><div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Beban Mental</h3><p class="text-gray-400 mb-4">Seberapa banyak aktivitas mental dan persepsi yang diperlukan?</p><input type="range" min="0" max="100" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div><div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Beban Fisik</h3><p class="text-gray-400 mb-4">Seberapa banyak aktivitas fisik yang diperlukan?</p><input type="range" min="0" max="100" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div><div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Tekanan Waktu</h3><p class="text-gray-400 mb-4">Seberapa besar tekanan waktu yang Anda rasakan?</p><input type="range" min="0" max="100" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div><div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Kinerja</h3><p class="text-gray-400 mb-4">Seberapa berhasil Anda dalam menyelesaikan apa yang diminta?</p><input type="range" min="0" max="100" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sempurna</span><span>Gagal</span></div></div><div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Usaha</h3><p class="text-gray-400 mb-4">Seberapa keras Anda harus bekerja untuk mencapai tingkat kinerja Anda?</p><input type="range" min="0" max="100" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div><div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Frustrasi</h3><p class="text-gray-400 mb-4">Seberapa tidak aman, kecewa, kesal, stres, dan terganggu yang Anda rasakan?</p><input type="range" min="0" max="100" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div></div></div>
+
+                        
+
+                        <div class="mb-8">
+                            <div class="relative pt-1">
+                                <div class="flex mb-2 items-center justify-between">
+                                    <div>
+                                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-custom bg-gray-700">Kemajuan</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-xs font-semibold inline-block text-custom">50%</span>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-700">
+                                    <div class="w-1/2 bg-custom rounded"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button onclick="window.location.href='vs.html'" class="!rounded-full w-full bg-gradient-to-r from-custom via-blue-500 to-purple-600 text-white py-5 px-8 font-semibold tracking-wide hover:from-purple-600 hover:via-blue-500 hover:to-custom transition-all duration-500 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom shadow-xl">Kirim Penilaian</button>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-gray-800 mt-12">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div class="text-center text-sm text-gray-400">
+                    <p>© 2024 Penilaian NASA TLX. Hak Cipta Dilindungi.</p>
+                    <p class="mt-2">Ini adalah implementasi tidak resmi dari NASA Task Load Index (TLX). NASA TLX adalah merek dagang dari National Aeronautics and Space Administration.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
