@@ -30,7 +30,13 @@
                             <p class="text-gray-400">Silakan nilai pengalaman Anda untuk setiap dimensi di bawah ini pada skala 0 hingga 100. Geser ke kanan untuk nilai lebih tinggi, ke kiri untuk nilai lebih rendah. Contoh: 25 menunjukkan intensitas rendah, 50 menunjukkan intensitas sedang, dan 75 menunjukkan intensitas tinggi.</p>
                         </div>
 
-                        <div class="mb-8"><div class="space-y-8"><div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Beban Mental</h3><p class="text-gray-400 mb-4">Seberapa banyak aktivitas mental dan persepsi yang diperlukan?</p><input type="range" min="0" max="100" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div><div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Beban Fisik</h3><p class="text-gray-400 mb-4">Seberapa banyak aktivitas fisik yang diperlukan?</p><input type="range" min="0" max="100" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div><div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Tekanan Waktu</h3><p class="text-gray-400 mb-4">Seberapa besar tekanan waktu yang Anda rasakan?</p><input type="range" min="0" max="100" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div><div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Kinerja</h3><p class="text-gray-400 mb-4">Seberapa berhasil Anda dalam menyelesaikan apa yang diminta?</p><input type="range" min="0" max="100" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sempurna</span><span>Gagal</span></div></div><div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Usaha</h3><p class="text-gray-400 mb-4">Seberapa keras Anda harus bekerja untuk mencapai tingkat kinerja Anda?</p><input type="range" min="0" max="100" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div><div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Frustrasi</h3><p class="text-gray-400 mb-4">Seberapa tidak aman, kecewa, kesal, stres, dan terganggu yang Anda rasakan?</p><input type="range" min="0" max="100" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div></div></div>
+                        <div class="mb-8"><div class="space-y-8">
+                            <div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Beban Mental</h3><p class="text-gray-400 mb-4">Seberapa banyak aktivitas mental dan persepsi yang diperlukan?</p><input type="range" min="0" max="100" oninput="updateLabel('mental', this.value)" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span id="mentalValue">0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div>
+                            <div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Beban Fisik</h3><p class="text-gray-400 mb-4">Seberapa banyak aktivitas fisik yang diperlukan?</p><input type="range" min="0" max="100" oninput="updateLabel('physical', this.value)" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span id="physicalValue">0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div>
+                            <div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Tekanan Waktu</h3><p class="text-gray-400 mb-4">Seberapa besar tekanan waktu yang Anda rasakan?</p><input type="range" min="0" max="100" oninput="updateLabel('time', this.value)" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span id="timeValue">0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div>
+                            <div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Kinerja</h3><p class="text-gray-400 mb-4">Seberapa berhasil Anda dalam menyelesaikan apa yang diminta?</p><input type="range" min="0" max="100" oninput="updateLabel('performance', this.value)" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span id="performanceValue">0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sempurna</span><span>Gagal</span></div></div>
+                            <div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Usaha</h3><p class="text-gray-400 mb-4">Seberapa keras Anda harus bekerja untuk mencapai tingkat kinerja Anda?</p><input type="range" min="0" max="100" oninput="updateLabel('effort', this.value)" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span id="effortValue">0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div>
+                            <div class="bg-gray-700 rounded-lg p-6"><h3 class="text-lg font-medium text-gray-100 mb-4">Frustrasi</h3><p class="text-gray-400 mb-4">Seberapa tidak aman, kecewa, kesal, stres, dan terganggu yang Anda rasakan?</p><input type="range" min="0" max="100" oninput="updateLabel('frustration', this.value)" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"/><div class="flex justify-between text-xs text-gray-400 mt-1"><span id="frustrationValue">0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div class="flex justify-between text-sm text-gray-400 mt-2"><span>Sangat Rendah</span><span>Sangat Tinggi</span></div></div></div></div>
 
                         
 
@@ -48,16 +54,14 @@
                                     <div class="w-1/2 bg-custom rounded"></div>
                                 </div>
                             </div>
+                            
+                            <form onsubmit="saveScoresAndNavigate(); return false;">
+                                <button type="submit" class="!rounded-full w-full bg-gradient-to-r from-custom via-blue-500 to-purple-600 text-white py-5 px-8 font-semibold tracking-wide hover:from-purple-600 hover:via-blue-500 hover:to-custom transition-all duration-500 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom shadow-xl">
+                                    Simpan & Lanjutkan
+                                </button>
+                            </form>                            
                         </div>
-
-                        <button onclick="window.location.href='vs.html'" class="!rounded-full w-full bg-gradient-to-r from-custom via-blue-500 to-purple-600 text-white py-5 px-8 font-semibold tracking-wide hover:from-purple-600 hover:via-blue-500 hover:to-custom transition-all duration-500 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom shadow-xl">Kirim Penilaian</button>
-
-                        
-                    </div>
-                </div>
-            </div>
         </main>
-
         <footer class="bg-gray-800 mt-12">
             <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                 <div class="text-center text-sm text-gray-400">
@@ -66,6 +70,56 @@
                 </div>
             </div>
         </footer>
-    </div>
+        <script>
+            /**
+             * Fungsi untuk memperbarui nilai slider
+             */
+            function updateLabel(id, value) {
+                document.getElementById(id + 'Value').textContent = value;
+            }
+        
+            /**
+             * Fungsi untuk menyimpan skor ke localStorage dan navigasi
+             */
+             function saveScoresAndNavigate() {
+                console.log('Navigating to vs.html'); // Debugging log
+
+                // Ambil nilai slider
+                const mental = document.getElementById('mental')?.value || null;
+                const physical = document.getElementById('physical')?.value || null;
+                const time = document.getElementById('time')?.value || null;
+                const performance = document.getElementById('performance')?.value || null;
+                const effort = document.getElementById('effort')?.value || null;
+                const frustration = document.getElementById('frustration')?.value || null;
+
+                console.log({ mental, physical, time, performance, effort, frustration });
+
+                // Cek apakah semua nilai diambil dengan benar
+                if (!mental || !physical || !time || !performance || !effort || !frustration) {
+                    alert('Semua nilai harus diisi sebelum melanjutkan.');
+                    return;
+                }
+
+                // Simpan ke localStorage
+                localStorage.setItem('mental', mental);
+                localStorage.setItem('physical', physical);
+                localStorage.setItem('time', time);
+                localStorage.setItem('performance', performance);
+                localStorage.setItem('effort', effort);
+                localStorage.setItem('frustration', frustration);
+
+                console.log('Data saved to localStorage.');
+
+                // Arahkan ke halaman berikutnya
+                window.location.href = 'vs.html';
+            }
+
+        
+            // Pastikan script berjalan setelah DOM siap
+            document.addEventListener('DOMContentLoaded', () => {
+                console.log('Page loaded');
+            });
+        </script>
+        
 </body>
 </html>
